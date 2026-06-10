@@ -148,6 +148,12 @@ model User {
   googleId         String?     @unique
   linkedinId       String?     @unique
 
+  // Backend compatibility fields
+  phone            String?
+  website          String?
+  industry         String?
+  teamSize         String?
+
   candidateProfile Candidate?
   recruiterProfile Recruiter?
   resumes          Resume[]

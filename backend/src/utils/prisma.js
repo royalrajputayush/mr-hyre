@@ -4,11 +4,16 @@ import { PrismaClient } from "@prisma/client";
 
 const connectionString = process.env.DATABASE_URL;
 
+const isLocalDb = connectionString && (
+  connectionString.includes("localhost") || 
+  connectionString.includes("127.0.0.1") || 
+  connectionString.includes("db") || 
+  connectionString.includes("host.docker.internal")
+);
+
 const pool = new pg.Pool({ 
   connectionString,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  ssl: isLocalDb ? false : { rejectUnauthorized: false }
 });
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });

@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env
+.env.local
+npm-debug.log
+public/uploads
+backend
+.git
+.github
+.kilo
+README.md
+AGENTS.md
+eslint.config.mjs
+tsconfig.tsbuildinfo
