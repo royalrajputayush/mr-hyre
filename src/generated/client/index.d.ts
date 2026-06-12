@@ -10010,6 +10010,10 @@ export namespace Prisma {
     isVerified: boolean | null
     googleId: string | null
     linkedinId: string | null
+    phone: string | null
+    website: string | null
+    industry: string | null
+    teamSize: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -10023,6 +10027,10 @@ export namespace Prisma {
     isVerified: boolean | null
     googleId: string | null
     linkedinId: string | null
+    phone: string | null
+    website: string | null
+    industry: string | null
+    teamSize: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -10036,6 +10044,10 @@ export namespace Prisma {
     isVerified: number
     googleId: number
     linkedinId: number
+    phone: number
+    website: number
+    industry: number
+    teamSize: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -10051,6 +10063,10 @@ export namespace Prisma {
     isVerified?: true
     googleId?: true
     linkedinId?: true
+    phone?: true
+    website?: true
+    industry?: true
+    teamSize?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -10064,6 +10080,10 @@ export namespace Prisma {
     isVerified?: true
     googleId?: true
     linkedinId?: true
+    phone?: true
+    website?: true
+    industry?: true
+    teamSize?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -10077,6 +10097,10 @@ export namespace Prisma {
     isVerified?: true
     googleId?: true
     linkedinId?: true
+    phone?: true
+    website?: true
+    industry?: true
+    teamSize?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -10163,6 +10187,10 @@ export namespace Prisma {
     isVerified: boolean
     googleId: string | null
     linkedinId: string | null
+    phone: string | null
+    website: string | null
+    industry: string | null
+    teamSize: string | null
     createdAt: Date
     updatedAt: Date
     _count: UserCountAggregateOutputType | null
@@ -10193,6 +10221,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: boolean
     linkedinId?: boolean
+    phone?: boolean
+    website?: boolean
+    industry?: boolean
+    teamSize?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     candidateProfile?: boolean | User$candidateProfileArgs<ExtArgs>
@@ -10210,6 +10242,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: boolean
     linkedinId?: boolean
+    phone?: boolean
+    website?: boolean
+    industry?: boolean
+    teamSize?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -10223,6 +10259,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: boolean
     linkedinId?: boolean
+    phone?: boolean
+    website?: boolean
+    industry?: boolean
+    teamSize?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -10236,11 +10276,15 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: boolean
     linkedinId?: boolean
+    phone?: boolean
+    website?: boolean
+    industry?: boolean
+    teamSize?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "password" | "name" | "role" | "isVerified" | "googleId" | "linkedinId" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "password" | "name" | "role" | "isVerified" | "googleId" | "linkedinId" | "phone" | "website" | "industry" | "teamSize" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     candidateProfile?: boolean | User$candidateProfileArgs<ExtArgs>
     recruiterProfile?: boolean | User$recruiterProfileArgs<ExtArgs>
@@ -10266,6 +10310,10 @@ export namespace Prisma {
       isVerified: boolean
       googleId: string | null
       linkedinId: string | null
+      phone: string | null
+      website: string | null
+      industry: string | null
+      teamSize: string | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["user"]>
@@ -10702,6 +10750,10 @@ export namespace Prisma {
     readonly isVerified: FieldRef<"User", 'Boolean'>
     readonly googleId: FieldRef<"User", 'String'>
     readonly linkedinId: FieldRef<"User", 'String'>
+    readonly phone: FieldRef<"User", 'String'>
+    readonly website: FieldRef<"User", 'String'>
+    readonly industry: FieldRef<"User", 'String'>
+    readonly teamSize: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
@@ -13436,6 +13488,10 @@ export namespace Prisma {
     isVerified: 'isVerified',
     googleId: 'googleId',
     linkedinId: 'linkedinId',
+    phone: 'phone',
+    website: 'website',
+    industry: 'industry',
+    teamSize: 'teamSize',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -14195,6 +14251,10 @@ export namespace Prisma {
     isVerified?: BoolFilter<"User"> | boolean
     googleId?: StringNullableFilter<"User"> | string | null
     linkedinId?: StringNullableFilter<"User"> | string | null
+    phone?: StringNullableFilter<"User"> | string | null
+    website?: StringNullableFilter<"User"> | string | null
+    industry?: StringNullableFilter<"User"> | string | null
+    teamSize?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     candidateProfile?: XOR<CandidateNullableScalarRelationFilter, CandidateWhereInput> | null
@@ -14211,6 +14271,10 @@ export namespace Prisma {
     isVerified?: SortOrder
     googleId?: SortOrderInput | SortOrder
     linkedinId?: SortOrderInput | SortOrder
+    phone?: SortOrderInput | SortOrder
+    website?: SortOrderInput | SortOrder
+    industry?: SortOrderInput | SortOrder
+    teamSize?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     candidateProfile?: CandidateOrderByWithRelationInput
@@ -14230,6 +14294,10 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
     isVerified?: BoolFilter<"User"> | boolean
+    phone?: StringNullableFilter<"User"> | string | null
+    website?: StringNullableFilter<"User"> | string | null
+    industry?: StringNullableFilter<"User"> | string | null
+    teamSize?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     candidateProfile?: XOR<CandidateNullableScalarRelationFilter, CandidateWhereInput> | null
@@ -14246,6 +14314,10 @@ export namespace Prisma {
     isVerified?: SortOrder
     googleId?: SortOrderInput | SortOrder
     linkedinId?: SortOrderInput | SortOrder
+    phone?: SortOrderInput | SortOrder
+    website?: SortOrderInput | SortOrder
+    industry?: SortOrderInput | SortOrder
+    teamSize?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -14265,6 +14337,10 @@ export namespace Prisma {
     isVerified?: BoolWithAggregatesFilter<"User"> | boolean
     googleId?: StringNullableWithAggregatesFilter<"User"> | string | null
     linkedinId?: StringNullableWithAggregatesFilter<"User"> | string | null
+    phone?: StringNullableWithAggregatesFilter<"User"> | string | null
+    website?: StringNullableWithAggregatesFilter<"User"> | string | null
+    industry?: StringNullableWithAggregatesFilter<"User"> | string | null
+    teamSize?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -15085,6 +15161,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     candidateProfile?: CandidateCreateNestedOneWithoutUserInput
@@ -15101,6 +15181,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     candidateProfile?: CandidateUncheckedCreateNestedOneWithoutUserInput
@@ -15117,6 +15201,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     candidateProfile?: CandidateUpdateOneWithoutUserNestedInput
@@ -15133,6 +15221,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     candidateProfile?: CandidateUncheckedUpdateOneWithoutUserNestedInput
@@ -15149,6 +15241,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -15162,6 +15258,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -15175,6 +15275,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -15834,6 +15938,10 @@ export namespace Prisma {
     isVerified?: SortOrder
     googleId?: SortOrder
     linkedinId?: SortOrder
+    phone?: SortOrder
+    website?: SortOrder
+    industry?: SortOrder
+    teamSize?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -15847,6 +15955,10 @@ export namespace Prisma {
     isVerified?: SortOrder
     googleId?: SortOrder
     linkedinId?: SortOrder
+    phone?: SortOrder
+    website?: SortOrder
+    industry?: SortOrder
+    teamSize?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -15860,6 +15972,10 @@ export namespace Prisma {
     isVerified?: SortOrder
     googleId?: SortOrder
     linkedinId?: SortOrder
+    phone?: SortOrder
+    website?: SortOrder
+    industry?: SortOrder
+    teamSize?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -16722,6 +16838,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     recruiterProfile?: RecruiterCreateNestedOneWithoutUserInput
@@ -16737,6 +16857,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     recruiterProfile?: RecruiterUncheckedCreateNestedOneWithoutUserInput
@@ -16822,6 +16946,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     recruiterProfile?: RecruiterUpdateOneWithoutUserNestedInput
@@ -16837,6 +16965,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     recruiterProfile?: RecruiterUncheckedUpdateOneWithoutUserNestedInput
@@ -16908,6 +17040,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     candidateProfile?: CandidateCreateNestedOneWithoutUserInput
@@ -16923,6 +17059,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     candidateProfile?: CandidateUncheckedCreateNestedOneWithoutUserInput
@@ -17020,6 +17160,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     candidateProfile?: CandidateUpdateOneWithoutUserNestedInput
@@ -17035,6 +17179,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     candidateProfile?: CandidateUncheckedUpdateOneWithoutUserNestedInput
@@ -18019,6 +18167,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     candidateProfile?: CandidateCreateNestedOneWithoutUserInput
@@ -18034,6 +18186,10 @@ export namespace Prisma {
     isVerified?: boolean
     googleId?: string | null
     linkedinId?: string | null
+    phone?: string | null
+    website?: string | null
+    industry?: string | null
+    teamSize?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     candidateProfile?: CandidateUncheckedCreateNestedOneWithoutUserInput
@@ -18065,6 +18221,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     candidateProfile?: CandidateUpdateOneWithoutUserNestedInput
@@ -18080,6 +18240,10 @@ export namespace Prisma {
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     googleId?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinId?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    teamSize?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     candidateProfile?: CandidateUncheckedUpdateOneWithoutUserNestedInput

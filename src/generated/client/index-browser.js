@@ -225,6 +225,10 @@ exports.Prisma.UserScalarFieldEnum = {
   isVerified: 'isVerified',
   googleId: 'googleId',
   linkedinId: 'linkedinId',
+  phone: 'phone',
+  website: 'website',
+  industry: 'industry',
+  teamSize: 'teamSize',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };

@@ -24,39 +24,42 @@
 
 ## 1. Empty Files & Dead Code
 
-These files exist in the codebase but are completely empty (0 bytes) or contain no functional code:
+These files have been cleaned up and removed from the codebase:
 
-| File | Status | Action Required |
-|------|--------|-----------------|
-| `lib/matching.ts` | **Empty file (0 bytes)** | Implement or delete. The actual matching logic lives in `lib/ai-matcher.ts`. This file is unused. |
-| `components/landing/Candidate.tsx` | **Empty file (0 bytes)** | Implement the Candidate section for the landing page, or delete if not needed. It is NOT imported in `app/page.tsx`. |
+| File | Status / Action Taken |
+|------|----------------------|
+| `lib/matching.ts` | **Deleted** — confirmed unused (replaced by `lib/ai-matcher.ts`) |
+| `components/landing/Candidate.tsx` | **Deleted** — confirmed unused and empty |
 
 ### Dead Code / Debug Routes
 
-| File | Issue | Action Required |
-|------|-------|-----------------|
-| `app/api/test-db/route.ts` | Debug-only route that exposes Prisma model names publicly | **Delete** — security risk in production |
-| `app/api/debug/users/` | Empty directory, likely a leftover debug endpoint | **Delete** |
-| `app/api/debug/` | Contains only empty subdirectory | **Delete entire directory** |
-| `backend/test-flow.html` | Integration test UI that hardcodes `http://localhost:5000` | **Delete** — not needed in production |
-| `backend/check-counts.js` | Diagnostic script for counting DB records | **Delete** — development-only utility |
+| File | Issue / Action Taken |
+|------|----------------------|
+| `app/api/test-db/route.ts` | **Deleted** — removed public debug endpoint to fix security risk |
+| `app/api/debug/` | **Deleted** — removed entire empty directory |
+| `backend/test-flow.html` | **Deleted** — removed integration test UI from production |
+| `backend/check-counts.js` | **Deleted** — removed development-only diagnostic utility |
 
 ### Unused Static Assets
 
-| File | Issue |
-|------|-------|
-| `public/file.svg` | Default Next.js scaffold asset — unused |
-| `public/globe.svg` | Default Next.js scaffold asset — unused |
-| `public/next.svg` | Default Next.js scaffold asset — unused |
-| `public/vercel.svg` | Default Next.js scaffold asset — unused |
-| `public/window.svg` | Default Next.js scaffold asset — unused |
-| `public/hero-bg.png`, `hero-bg-v2.png`, `hero-bg-v3.png` | Multiple hero background versions — audit which is actually used and delete the rest |
+| File | Issue / Action Taken |
+|------|----------------------|
+| `public/file.svg` | **Deleted** — default Next.js scaffold asset |
+| `public/globe.svg` | **Deleted** — default Next.js scaffold asset |
+| `public/next.svg` | **Deleted** — default Next.js scaffold asset |
+| `public/vercel.svg` | **Deleted** — default Next.js scaffold asset |
+| `public/window.svg` | **Deleted** — default Next.js scaffold asset |
+| `public/hero-bg.png` | **Deleted** — audited and confirmed unused |
+| `public/hero-bg-v2.png` | **Deleted** — audited and confirmed unused |
+| `public/hero-bg-v3.png` | **Deleted** — audited and confirmed unused |
+| `public/dashboard.png` | **Deleted** — audited and confirmed unused large screenshot (1.7MB) |
+| `public/recruiter.png` | **Deleted** — audited and confirmed unused large screenshot (2.4MB) |
 
 ### Duplicate Config Files
 
-| File | Issue |
-|------|-------|
-| `postcss.config.js` AND `postcss.config.mjs` | Two PostCSS config files exist. Only one should be kept (likely `.mjs`). |
+| File | Issue / Action Taken |
+|------|----------------------|
+| `postcss.config.mjs` | **Deleted** — removed redundant Tailwind v4 config; kept `postcss.config.js` for compatibility with Tailwind v3 |
 
 ---
 
