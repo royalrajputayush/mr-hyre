@@ -80,17 +80,16 @@ These skeleton directories have been resolved, populated with reusable component
 
 ## 3. Frontend — Missing & Incomplete Features
 
-### 3.1 Contact Page — Form Not Functional
+### 3.1 Contact Page — Form Functional [RESOLVED]
 
 **File:** `app/contact/page.tsx`
 
-The contact form is **purely visual**. The `<form>` has no `onSubmit` handler, no API call, no state management. The "Send Message" button does nothing.
+The contact form is now fully functional, wired up with frontend state management, server-side nodemailer integration, input validation, and user feedback:
 
-**Work Required:**
-- [ ] Add form state management (name, email, message)
-- [ ] Create `/api/contact` route to handle submissions
-- [ ] Send contact form data via email (nodemailer) or store in DB
-- [ ] Add form validation and success/error feedback
+- [x] **Add form state management** (name, email, message)
+- [x] **Create `/api/contact` route** to validate submissions
+- [x] **Send contact form data via email** (via Nodemailer helper)
+- [x] **Add form validation** and success/error feedback (interactive banners and loaders)
 
 ### 3.2 Settings Pages — UI-Only Toggles
 
