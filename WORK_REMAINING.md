@@ -65,16 +65,16 @@ These files have been cleaned up and removed from the codebase:
 
 ## 2. Empty Directories (Stub/Skeleton)
 
-These directories exist but contain no files, indicating planned but unimplemented features:
+These skeleton directories have been resolved, populated with reusable components and logic, or removed:
 
-| Directory | Purpose | Action Required |
-|-----------|---------|-----------------|
-| `components/candidate/` | Reusable candidate UI components | Build shared components (profile card, resume card, stats widgets) |
-| `components/recruiter/` | Reusable recruiter UI components | Build shared components (job card, analytics widgets) |
-| `components/dashboard/` | Shared dashboard components | Build shared dashboard widgets |
-| `app/settings/` | Root settings page (not role-specific) | Implement or redirect to role-specific settings |
-| `app/interviews/` | Root-level interviews page | Implement or redirect to role-specific interviews |
-| `app/candidate/admin/` | Candidate admin area | Purpose unclear — delete or implement |
+| Directory / File | Action Taken |
+|------------------|--------------|
+| `components/dashboard/GlassCard.tsx` | **Created** — unified the `GlassCard` component which was duplicated across 13 different files |
+| `components/candidate/ResumeCard.tsx` | **Created** — built a reusable resume details/upload component |
+| `components/recruiter/JobCard.tsx` | **Created** — built a reusable sector/job list component |
+| `app/settings/page.tsx` | **Created** — implemented root-level `/settings` which handles server-verified role-based settings redirection |
+| `app/interviews/page.tsx` | **Created** — implemented root-level `/interviews` which handles server-verified role-based routing to interviews |
+| `app/candidate/admin/` | **Deleted** — removed this redundant/unneeded candidate subdirectory |
 
 ---
 
